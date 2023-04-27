@@ -76,12 +76,17 @@ puts apple["url"]
 
 
 # 6. update a row's column value
-amazon = Company.find_by({"name" => "Amazon"})
 
+amazon = Company.find_by({"name" => "Amazon"})
 amazon["url"] = "https://amazon.com"
 amazon.save #update row in table
-
 puts amazon["url"]
 
+# Company.update_all({"state" => "California"})
 
 # 7. delete a row
+
+twitter = Company.find_by({"name" => "Twitter"})
+twitter.destroy
+
+puts "There are #{Company.all.count} companies"
