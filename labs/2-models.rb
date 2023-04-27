@@ -5,7 +5,7 @@
 
 # **************************
 # DON'T CHANGE OR MOVE
-Salesperson.destroy_all
+Salesperson.destroy_all # delete all the rows in companies
 # **************************
 
 # Lab 2: Models
@@ -18,6 +18,8 @@ Salesperson.destroy_all
 
 # 1a. check out the schema file
 # 1b. check out the model file
+
+puts "There are #{Company.all.count} companies"
 
 # 2. insert 1-2 rows in salespeople table.
 
